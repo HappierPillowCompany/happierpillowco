@@ -227,13 +227,90 @@
 
     /* ── MOBILE ── */
     @media(max-width:900px){
-      nav{padding:18px 24px}
-      nav.up{padding:14px 24px}
-      .nav-links{display:none}
-      .hero{grid-template-columns:1fr;min-height:auto}
-      .hero-l{padding:110px 24px 72px}
-      .hero-r{display:none}
-      .hero-scroll{display:none}
+
+      /* NAV — centered logo */
+      nav { padding:20px 24px; justify-content:center; }
+      nav.up { padding:15px 24px; background:rgba(237,233,247,0.97); }
+      .nav-logo { height:36px; opacity:1; animation:none; }
+      .nav-links { display:none; }
+
+      /* HERO — Option A: lavender immersion */
+      .hero { grid-template-columns:1fr; min-height:100svh; }
+      .hero-l {
+        background: var(--lavender);
+        padding: 130px 28px 90px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100svh;
+      }
+      /* Embossed watermark behind text */
+      .hero-l::before {
+        content: 'Happier';
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 30vw;
+        font-weight: 300;
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(26,26,26,0.07);
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        white-space: nowrap;
+        user-select: none;
+        pointer-events: none;
+        line-height: 1;
+        z-index: 0;
+      }
+      /* Magenta block — bottom right corner */
+      .hero-l::after {
+        content: '';
+        position: absolute;
+        bottom: 0; right: 0;
+        width: 48%; height: 26%;
+        background: var(--magenta);
+        z-index: 0;
+      }
+      /* Yellow dot */
+      .hero-accent-yel {
+        display: block;
+        position: absolute;
+        top: 16%; left: 6%;
+        width: 54px; height: 54px;
+        background: var(--yellow);
+        border-radius: 50%;
+        opacity: 1; animation: none;
+        z-index: 1;
+      }
+      /* Teal left edge line */
+      .hero-accent-teal {
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
+        width: 4px; height: 52%;
+        background: var(--teal);
+        opacity: 1; animation: none;
+        z-index: 1;
+      }
+      .hero-r { display:none; }
+      .hero-accent-mag { display:none; }
+      .hero-scroll { display:none; }
+
+      /* Text sits above watermark */
+      .hero-eyebrow,
+      h1.hero-title,
+      .hero-body,
+      .hero-actions { position: relative; z-index: 2; }
+
+      .hero-eyebrow { color: var(--ink-mid); }
+      .hero-eyebrow::before { background: var(--ink-mid); }
+      h1.hero-title { font-size: clamp(40px, 11vw, 62px); margin-bottom: 24px; }
+      .hero-body { color: var(--ink-mid); margin-bottom: 40px; max-width: 100%; }
+      .hero-actions { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .btn-solid { width: 100%; text-align: center; }
+
+      /* REST OF PAGE */
       .shop{padding:80px 24px}
       .shop-header{flex-direction:column;align-items:flex-start;gap:16px}
       .shop-aside{text-align:left;max-width:100%}
