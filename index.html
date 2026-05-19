@@ -363,7 +363,8 @@
     </div>
     <p class="sa rv d2">Each piece is one of a kind.<br>When it's gone, it's gone.</p>
   </div>
-<div id='collection-component-1779214877742'></div>
+  <div style="position:relative;z-index:10">
+<div id='collection-component-1779216785783'></div>
 <script type="text/javascript">
 /*<![CDATA[*/
 (function () {
@@ -392,17 +393,17 @@
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('collection', {
         id: '309868363866',
-        node: document.getElementById('collection-component-1779214877742'),
+        node: document.getElementById('collection-component-1779216785783'),
         moneyFormat: '%24%7B%7Bamount%7D%7D',
         options: {
   "product": {
     "styles": {
       "product": {
         "@media (min-width: 601px)": {
-          "max-width": "calc(25% - 20px)",
-          "margin-left": "20px",
+          "max-width": "calc(50% - 40px)",
+          "margin-left": "40px",
           "margin-bottom": "50px",
-          "width": "calc(25% - 20px)"
+          "width": "calc(50% - 40px)"
         },
         "img": {
           "height": "calc(100% - 15px)",
@@ -418,6 +419,8 @@
         }
       },
       "title": {
+        "font-family": "Gill Sans, sans-serif",
+        "font-weight": "normal",
         "color": "#0f0f0f"
       },
       "button": {
@@ -430,28 +433,31 @@
         }
       },
       "price": {
+        "font-family": "Gill Sans, sans-serif",
         "color": "#e8217a"
       },
       "compareAt": {
+        "font-family": "Gill Sans, sans-serif",
         "color": "#e8217a"
       },
       "unitPrice": {
+        "font-family": "Gill Sans, sans-serif",
         "color": "#e8217a"
       }
     },
+    "buttonDestination": "modal",
     "contents": {
-      "button": false,
-      "buttonWithQuantity": true
+      "options": false
     },
     "text": {
-      "button": "Add to cart"
+      "button": "View Product"
     }
   },
   "productSet": {
     "styles": {
       "products": {
         "@media (min-width: 601px)": {
-          "margin-left": "-20px"
+          "margin-left": "-40px"
         }
       }
     }
@@ -481,28 +487,28 @@
         }
       },
       "title": {
-        "font-family": "Helvetica Neue, sans-serif",
-        "font-weight": "bold",
-        "font-size": "26px",
-        "color": "#4c4c4c"
+        "font-family": "Gill Sans, sans-serif",
+        "font-weight": "normal",
+        "font-size": "30px",
+        "color": "#0f0f0f"
       },
       "price": {
         "font-family": "Helvetica Neue, sans-serif",
         "font-weight": "normal",
         "font-size": "18px",
-        "color": "#4c4c4c"
+        "color": "#e8217a"
       },
       "compareAt": {
         "font-family": "Helvetica Neue, sans-serif",
         "font-weight": "normal",
         "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
+        "color": "#e8217a"
       },
       "unitPrice": {
         "font-family": "Helvetica Neue, sans-serif",
         "font-weight": "normal",
         "font-size": "15.299999999999999px",
-        "color": "#4c4c4c"
+        "color": "#e8217a"
       }
     },
     "text": {
@@ -520,6 +526,54 @@
         ":focus": {
           "background-color": "#1a1a1a"
         }
+      },
+      "title": {
+        "color": "#0f0f0f"
+      },
+      "header": {
+        "color": "#0f0f0f"
+      },
+      "lineItems": {
+        "color": "#0f0f0f"
+      },
+      "subtotalText": {
+        "color": "#0f0f0f"
+      },
+      "subtotal": {
+        "color": "#0f0f0f"
+      },
+      "notice": {
+        "color": "#0f0f0f"
+      },
+      "currency": {
+        "color": "#0f0f0f"
+      },
+      "close": {
+        "color": "#0f0f0f",
+        ":hover": {
+          "color": "#0f0f0f"
+        }
+      },
+      "empty": {
+        "color": "#0f0f0f"
+      },
+      "noteDescription": {
+        "color": "#0f0f0f"
+      },
+      "discountText": {
+        "color": "#0f0f0f"
+      },
+      "discountIcon": {
+        "fill": "#0f0f0f"
+      },
+      "discountAmount": {
+        "color": "#0f0f0f"
+      },
+      "cart": {
+        "background-color": "#ede9f7"
+      },
+      "footer": {
+        "background-color": "#ede9f7"
       }
     },
     "text": {
@@ -538,6 +592,43 @@
         ":focus": {
           "background-color": "#1a1a1a"
         }
+      }
+    }
+  },
+  "lineItem": {
+    "styles": {
+      "variantTitle": {
+        "color": "#0f0f0f"
+      },
+      "title": {
+        "color": "#0f0f0f"
+      },
+      "price": {
+        "color": "#0f0f0f"
+      },
+      "fullPrice": {
+        "color": "#0f0f0f"
+      },
+      "discount": {
+        "color": "#0f0f0f"
+      },
+      "discountIcon": {
+        "fill": "#0f0f0f"
+      },
+      "quantity": {
+        "color": "#0f0f0f"
+      },
+      "quantityIncrement": {
+        "color": "#0f0f0f",
+        "border-color": "#0f0f0f"
+      },
+      "quantityDecrement": {
+        "color": "#0f0f0f",
+        "border-color": "#0f0f0f"
+      },
+      "quantityInput": {
+        "color": "#0f0f0f",
+        "border-color": "#0f0f0f"
       }
     }
   }
